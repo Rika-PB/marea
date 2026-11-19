@@ -181,12 +181,43 @@
   const setRoom = (li) => {
     rooms.forEach((x) => x.classList.toggle('is-active', x === li));
     $$('[data-room-img]').forEach((img) => img.classList.toggle('is-active', img.dataset.roomImg === li.dataset.room));
+    $('.rooms__stage').dataset.caption = $('h4', li).textContent;
   };
+  setRoom(rooms[0]);
   rooms.forEach((li) => {
     if (finePointer) li.addEventListener('mouseenter', () => setRoom(li));
     li.addEventListener('click', () => setRoom(li));
     li.addEventListener('focus', () => setRoom(li));
   });
+
+  /* ---------- explore: mobile swipe layout ---------- */
+  const xIntro = $('.explore__intro'), xTrack = $('#exploreTrack'), xPin = $('.explore__pin');
+  const mqDesk = matchMedia('(min-width: 900px)');
+  const placeIntro = () => {
+    if (mqDesk.matches) { if (xIntro.parentElement !== xTrack) xTrack.prepend(xIntro); }
+    else if (xIntro.parentElement === xTrack) xPin.before(xIntro);
+  };
+  placeIntro();
+  mqDesk.addEventListener('change', () => { placeIntro(); if (hasGSAP) ScrollTrigger.refresh(); });
+  const xBar = $('#exploreBar');
+  const updBar = () => {
+    const max = xTrack.scrollWidth - xTrack.clientWidth;
+    xBar.style.transform = `scaleX(${max > 0 ? Math.max(0.12, xTrack.scrollLeft / max) : 1})`;
+  };
+  xTrack.addEventListener('scroll', updBar, { passive: true });
+  const xHint = $('.explore__hint');
+  xHint.style.cursor = 'pointer';
+  xHint.addEventListener('click', () => { if (!mqDesk.matches) xTrack.scrollBy({ left: xTrack.clientWidth * 0.8, behavior: 'smooth' }); });
+  // gentle one-time nudge so visitors see the row moves sideways
+  const nudgeIO = new IntersectionObserver((es) => es.forEach((e) => {
+    if (!e.isIntersecting || mqDesk.matches || reduced) return;
+    nudgeIO.disconnect();
+    setTimeout(() => {
+      xTrack.scrollBy({ left: 140, behavior: 'smooth' });
+      setTimeout(() => xTrack.scrollBy({ left: -140, behavior: 'smooth' }), 750);
+    }, 400);
+  }), { threshold: 0.6 });
+  nudgeIO.observe(xTrack);
 
   /* ---------- estimator ---------- */
   const PKG = {
@@ -473,6 +504,7 @@
     gsap.to(clock, { m: toMin(m.dataset.time), duration: 1.1, ease: 'power2.inOut', onUpdate: renderClock });
     clockLabel.textContent = m.dataset.label;
     gsap.to(daySec, { backgroundColor: m.dataset.bg, color: m.dataset.fg, duration: 1.2, ease: 'power2.out' });
+    daySec.style.setProperty('--day-bg', m.dataset.bg);
     daySec.classList.toggle('is-night', m === moments[moments.length - 1]);
   };
   moments.forEach((m) => ScrollTrigger.create({ trigger: m, start: 'top 55%', end: 'bottom 55%', onToggle: (s) => s.isActive && activate(m) }));
@@ -501,6 +533,13 @@
         gsap.fromTo($('img', card), { scale: 1.3, xPercent: 8 }, { scale: 1.05, xPercent: -8, ease: 'none', scrollTrigger: { trigger: card, containerAnimation: tween, start: 'left right', end: 'right left', scrub: true } });
         gsap.from(card, { y: 60, rotate: 2, ease: 'none', scrollTrigger: { trigger: card, containerAnimation: tween, start: 'left 110%', end: 'left 60%', scrub: true } });
       });
+    },
+  });
+
+  /* ---------- rooms: on small screens the photo follows the list while scrolling ---------- */
+  ScrollTrigger.matchMedia({
+    '(max-width: 959px)': () => {
+      rooms.forEach((li) => ScrollTrigger.create({ trigger: li, start: 'top 62%', end: 'bottom 62%', onToggle: (st) => st.isActive && setRoom(li) }));
     },
   });
 
