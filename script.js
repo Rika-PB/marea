@@ -425,15 +425,6 @@
     trigger: sec, start: () => `top ${navH()}`, end: () => `bottom ${navH()}`,
     onToggle: (self) => nav.classList.toggle('is-dark', self.isActive),
   }));
-  let lastY = 0;
-  ScrollTrigger.create({
-    start: 0, end: 'max',
-    onUpdate: (self) => {
-      const y = self.scroll();
-      if (!document.body.classList.contains('nav-open')) nav.classList.toggle('is-hidden', y > lastY && y > innerHeight);
-      lastY = y;
-    },
-  });
   const wave = $('#progressWave');
   const wl = wave.getTotalLength();
   gsap.set(wave, { strokeDasharray: wl, strokeDashoffset: wl });
