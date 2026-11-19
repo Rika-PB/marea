@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MAREA · Villa & Kite Camp Base · Watamu, Kenya</title>
+  <meta name="description" content="Marea at Arcadia Villa – a home base for kite camps, diving and fishing trips on the Indian Ocean in Watamu, Kenya. 4 bedrooms, pool, local team, 70 m to the beach.">
+  <meta name="theme-color" content="#1e3640">
+  <meta property="og:title" content="MAREA · Where the wind meets the tide">
+  <meta property="og:description" content="A home base for kite camps on the Indian Ocean – Watamu, Kenya.">
+  <meta property="og:image" content="images/01-kitesurfer-riding-the-turquoise-lagoon-a.jpg">
+  <link rel="icon" href="images/logo-dark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..500;1,9..144,400..500&family=Jost:ital,wght@0,400..600;1,400..500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <img class="loader__logo" src="images/logo-white.png" alt="">
+  <div class="loader__count"><span id="loaderCount">0</span>%</div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label" id="cursorLabel"></span></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand" aria-label="Marea – back to top">
+      <img class="nav__logo nav__logo--light" src="images/logo-white.png" alt="Marea at Arcadia Villa, Watamu">
+      <img class="nav__logo nav__logo--dark" src="images/logo-dark.png" alt="">
+    </a>
+    <nav class="nav__menu" id="menu" aria-label="Main">
+      <a href="#spot"><em>01</em>The spot</a>
+      <a href="#wind"><em>02</em>Wind</a>
+      <a href="#villa"><em>03</em>The villa</a>
+      <a href="#day"><em>04</em>A day</a>
+      <a href="#explore"><em>05</em>Explore</a>
+      <a href="#packages"><em>06</em>Packages</a>
+      <a href="#federica"><em>07</em>Federica</a>
+      <a href="#contact" class="nav__cta magnetic">Plan your camp</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+  <svg class="nav__progress" viewBox="0 0 1000 8" preserveAspectRatio="none" aria-hidden="true"><path id="progressWave" d="M0 4 Q 12.5 0 25 4 T 50 4 T 75 4 T 100 4 T 125 4 T 150 4 T 175 4 T 200 4 T 225 4 T 250 4 T 275 4 T 300 4 T 325 4 T 350 4 T 375 4 T 400 4 T 425 4 T 450 4 T 475 4 T 500 4 T 525 4 T 550 4 T 575 4 T 600 4 T 625 4 T 650 4 T 675 4 T 700 4 T 725 4 T 750 4 T 775 4 T 800 4 T 825 4 T 850 4 T 875 4 T 900 4 T 925 4 T 950 4 T 975 4 T 1000 4"/></svg>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero__media">
+    <img src="images/01-kitesurfer-riding-the-turquoise-lagoon-a.jpg" alt="Kitesurfer riding the turquoise lagoon at Watamu, seen from above" fetchpriority="high">
+  </div>
+  <div class="hero__shade"></div>
+  <img class="hero__logo" src="images/logo-white.png" alt="Marea at Arcadia Villa, Watamu">
+
+  <div class="hero__content">
+    <p class="eyebrow eyebrow--light hero__eyebrow"><span class="pulse"></span>Villa &amp; kite camp base · Watamu, Kenya</p>
+    <h1 class="hero__title" data-split>
+      Where the wind<br><em>meets the tide.</em>
+    </h1>
+    <div class="hero__bottom">
+      <p class="hero__sub">A home base for kite camps, diving and fishing trips on the Indian Ocean — just <strong>70&nbsp;metres</strong> from the beach.</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--light magnetic">Check availability <i>→</i></a>
+        <a href="#spot" class="btn btn--ghost">Discover Marea</a>
+      </div>
+    </div>
+  </div>
+
+  <aside class="live" aria-label="Watamu right now">
+    <div class="live__row"><span class="live__k">Watamu now</span><span class="live__v" id="liveTime">--:--</span></div>
+    <div class="live__row"><span class="live__k">Season</span><span class="live__v" id="liveSeason">—</span></div>
+    <div class="live__row"><span class="live__k">Water</span><span class="live__v">27 °C</span></div>
+  </aside>
+
+  <a href="#intro" class="hero__scroll" aria-label="Scroll down"><span>Scroll</span><i></i></a>
+</section>
+
+<!-- marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Kite schools</span><b>✦</b><span>Groups of friends</span><b>✦</b><span>Riders</span><b>✦</b><span>Diving trips</span><b>✦</b><span>Deep-sea fishing</span><b>✦</b><span>70 m to the beach</span><b>✦</b>
+    <span>Kite schools</span><b>✦</b><span>Groups of friends</span><b>✦</b><span>Riders</span><b>✦</b><span>Diving trips</span><b>✦</b><span>Deep-sea fishing</span><b>✦</b><span>70 m to the beach</span><b>✦</b>
+  </div>
+</div>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="manifesto" id="intro">
+  <div class="manifesto__float f1" data-speed="-18"><img src="images/02-traditional-dhows-anchored-over-the-reef.jpg" alt="" loading="lazy"></div>
+  <div class="manifesto__float f2" data-speed="22"><img src="images/02-elephant-and-safari-jeep-in-the-savannah.jpg" alt="" loading="lazy"></div>
+  <div class="manifesto__float f3" data-speed="-30"><img src="images/02-kites-over-the-shallow-turquoise-lagoon.jpg" alt="" loading="lazy"></div>
+  <div class="manifesto__float f4" data-speed="14"><img src="images/stock/beach-path.jpg" alt="" loading="lazy"></div>
+
+  <div class="wrap manifesto__inner">
+    <p class="eyebrow">Why Kenya &amp; why Watamu</p>
+    <h2 class="manifesto__head" data-split>Some places you visit.<br><em>Others you feel.</em></h2>
+    <p class="manifesto__text" data-scrub-words>Kenya is one of those places you should experience at least once in your lifetime — where the wind, the ocean, the wildlife and the endless savannah remind you what freedom feels like. On the coast, in Watamu, the rhythm of life slows down: barefoot days, warm ocean water, wild landscapes and a deep connection with nature.</p>
+    <p class="signature-line"><span></span>Come for the adventure. Stay for the feeling.</p>
+  </div>
+</section>
+
+<!-- ============ 01 THE SPOT ============ -->
+<section class="chapter spot" id="spot">
+  <div class="wrap">
+    <header class="chapter__head">
+      <span class="chapter__no">01</span>
+      <div>
+        <p class="eyebrow">The spot</p>
+        <h2 data-split>Where the wind meets<br>the <em>Indian Ocean.</em></h2>
+      </div>
+    </header>
+  </div>
+
+  <div class="wrap spot__grid">
+    <div class="spot__visual" data-cursor="Tide">
+      <div class="tideimg tideimg--low"><img src="images/stock/kite-aerial-shallow.jpg" alt="Kitesurfer over clear shallow water at low tide" loading="lazy"></div>
+      <div class="tideimg tideimg--high"><img src="images/03-kitesurfers-on-the-watamu-lagoon-inside.jpg" alt="Kitesurfers on the Watamu lagoon inside the reef at high tide" loading="lazy"></div>
+      <div class="tide-gauge" aria-hidden="true">
+        <div class="tide-gauge__water"><svg viewBox="0 0 120 20" preserveAspectRatio="none"><path d="M0 10 Q15 0 30 10 T60 10 T90 10 T120 10 V20 H0Z"/></svg></div>
+        <span class="tide-gauge__label" id="tideLabel">Low</span>
+      </div>
+    </div>
+
+    <div class="spot__text">
+      <p class="lead">Inside the reef, the lagoon offers shallow, relatively flat water in the right tidal window — ideal for lessons, progression and freestyle. Beyond the reef, the ocean opens up to waves and a completely different ride.</p>
+
+      <div class="tide-switch" role="tablist" aria-label="Tide">
+        <button role="tab" aria-selected="true" data-tide="low" class="is-active">Low tide</button>
+        <button role="tab" aria-selected="false" data-tide="high">High tide</button>
+        <span class="tide-switch__pill"></span>
+      </div>
+      <div class="tide-copy">
+        <p data-tide-copy="low" class="is-active">The ocean retreats, sandbanks appear and the lagoon turns into a mosaic of shallow turquoise pools.</p>
+        <p data-tide-copy="high">The lagoon fills with clear water and opens up more space to ride and explore.</p>
+      </div>
+
+      <dl class="spot__facts">
+        <div><dt>Inside the reef</dt><dd>Flat, shallow lagoon</dd></div>
+        <div><dt>Beyond the reef</dt><dd>Open ocean &amp; waves</dd></div>
+        <div><dt>From the villa</dt><dd><span data-count="70">70</span> m to the beach</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 WIND ============ -->
+<section class="chapter wind" id="wind">
+  <div class="wind__bg" aria-hidden="true"><img src="images/stock/kite-sunset.jpg" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <header class="chapter__head chapter__head--light">
+      <span class="chapter__no">02</span>
+      <div>
+        <p class="eyebrow eyebrow--light">Wind</p>
+        <h2 data-split>Two trade winds.<br><em>Wind most of the year.</em></h2>
+      </div>
+    </header>
+  </div>
+
+  <div class="wrap wind__grid">
+    <div class="wind__wheel" id="wheelWrap">
+      <svg id="windWheel" viewBox="0 0 340 340" role="img" aria-label="Wind seasons in Watamu: Kaskazi December to March, Kusi June to September, transition April–May and October–November"></svg>
+      <div class="wind__now" id="windNow"></div>
+    </div>
+
+    <div class="wind__info">
+      <p class="lead lead--light">Watamu sits between two monsoon trade winds: the warm, steady <strong>Kaskazi</strong> from the north-east and the stronger, more consistent <strong>Kusi</strong> from the south-east.</p>
+
+      <div class="seasons" role="tablist" aria-label="Wind seasons">
+        <button role="tab" data-season="kaskazi" class="season-tab"><i class="dot dot--kaskazi"></i>Kaskazi<small>Dec – Mar</small></button>
+        <button role="tab" data-season="kusi" class="season-tab"><i class="dot dot--kusi"></i>Kusi<small>Jun – Sep</small></button>
+        <button role="tab" data-season="transition" class="season-tab"><i class="dot dot--transition"></i>Transition<small>Apr–May · Oct–Nov</small></button>
+      </div>
+
+      <div class="season-panels">
+        <article class="season-panel" data-panel="kaskazi">
+          <div class="knots"><span data-count="15">15</span><sup>+</sup><small>knots</small></div>
+          <ul><li>North-east trade wind</li><li>Warm &amp; steady conditions</li><li>Ideal for lessons, progression and long kitesurf days</li></ul>
+        </article>
+        <article class="season-panel" data-panel="kusi">
+          <div class="knots"><span data-count="20">20</span><sup>+</sup><small>knots</small></div>
+          <ul><li>South-east trade wind</li><li>Stronger and more consistent wind</li><li>Great for progression and experienced riders</li></ul>
+        </article>
+        <article class="season-panel" data-panel="transition">
+          <div class="knots knots--var">Variable</div>
+          <ul><li>Variable winds, lighter and less consistent</li><li>Some rainfall, especially in April – May</li><li>Good days still possible, with more varied conditions</li></ul>
+        </article>
+      </div>
+      <p class="wind__note">Conditions change day to day — <a href="#contact">ask us about the best dates for your group →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHO ============ -->
+<section class="chapter who" id="who">
+  <div class="wrap">
+    <header class="split-head">
+      <div>
+        <p class="eyebrow">Who it’s for</p>
+        <h2 data-split>Your camp.<br><em>Your people.</em></h2>
+      </div>
+      <p class="lead">Marea is made for groups who come for the water and want a real home to return to — kite camps first, but just as much diving and fishing trips.</p>
+    </header>
+  </div>
+  <div class="wrap">
+    <div class="panels">
+      <article class="panel is-open" tabindex="0">
+        <img src="images/05-instructor-teaching-students-in-the-wate.jpg" alt="Instructor teaching students in the water" loading="lazy">
+        <div class="panel__body">
+          <h3>Kite schools</h3>
+          <p>Run your camp from one base. Rooms, meals and beach support are organised, so you can focus on teaching.</p>
+        </div>
+      </article>
+      <article class="panel" tabindex="0">
+        <img src="images/05-a-group-of-friends-on-the-beach-in-watam.jpg" alt="A group of friends on the beach in Watamu" loading="lazy">
+        <div class="panel__body">
+          <h3>Groups of friends</h3>
+          <p>Take the whole villa, ride together all day and share the evenings by the pool.</p>
+        </div>
+      </article>
+      <article class="panel" tabindex="0">
+        <img src="images/stock/kite-aerial-two.jpg" alt="Two kitesurfers gliding across turquoise water" loading="lazy">
+        <div class="panel__body">
+          <h3>Riders</h3>
+          <p>Looking for a calm place to stay close to the spot? Join a group or bring your own crew.</p>
+        </div>
+      </article>
+      <article class="panel" tabindex="0">
+        <img src="images/stock/turtle.jpg" alt="Sea turtle swimming over the reef" loading="lazy">
+        <div class="panel__body">
+          <h3>Diving &amp; fishing</h3>
+          <p>Reef dives with turtles, deep-sea fishing trips — the same home base, a different kind of ocean day.</p>
+        </div>
+      </article>
+    </div>
+    <p class="quote-xl" data-split>Go for full kite immersion — <em>or slow down and discover everything Watamu has to offer.</em></p>
+  </div>
+</section>
+
+<!-- ============ 03 THE VILLA ============ -->
+<section class="chapter villa" id="villa">
+  <div class="villa__reveal">
+    <div class="clip-reveal">
+      <img src="images/06-marea-villa-surrounded-by-its-tropical-g.jpg" alt="Marea villa surrounded by its tropical garden" loading="lazy">
+    </div>
+    <div class="villa__title">
+      <span class="chapter__no chapter__no--light">03</span>
+      <h2 data-split>Welcome to <em>Marea.</em></h2>
+    </div>
+  </div>
+
+  <div class="wrap villa__intro">
+    <p class="lead lead--big">A simple, authentic tropical villa just 70 metres from the Indian Ocean — four bedrooms, a swimming pool, a lush garden and a dedicated local team. <em>Spend your days on the water, come back to calm, and let us take care of the details.</em></p>
+    <div class="stats">
+      <div class="stat"><b data-count="4">4</b><span>Bedrooms<br>private bathrooms</span></div>
+      <div class="stat"><b data-count="12">12</b><span>Guests<br>maximum</span></div>
+      <div class="stat"><b><span data-count="70">70</span><small>m</small></b><span>To the<br>ocean</span></div>
+      <div class="stat"><b data-count="1">1</b><span>Pool &amp;<br>tropical garden</span></div>
+    </div>
+  </div>
+
+  <!-- inside collage -->
+  <div class="wrap inside">
+    <div class="inside__text">
+      <p class="eyebrow">Inside Marea</p>
+      <h3 class="h-display" data-split>Feel at home.<br><em>Live together.</em></h3>
+      <p>Slow breakfasts, stories after the session, dinner together by the pool — and time to do nothing at all.</p>
+      <ul class="tags">
+        <li>Local staff · cook &amp; housekeeping</li>
+        <li>Shared spaces</li>
+        <li>Tropical garden</li>
+        <li>Swimming pool</li>
+      </ul>
+    </div>
+    <div class="inside__collage">
+      <figure class="c1 media" data-cursor="View"><img data-speed="8" src="images/07-swimming-pool-with-the-thatched-lounge-b.jpg" alt="Swimming pool with the thatched lounge behind it" loading="lazy"></figure>
+      <figure class="c2 media" data-cursor="View"><img data-speed="10" src="images/07-open-living-and-dining-room.jpg" alt="Open living and dining room" loading="lazy"></figure>
+      <figure class="c3 media" data-cursor="View"><img data-speed="6" src="images/07-arched-veranda-corridor-with-terracotta.jpg" alt="Arched veranda corridor with terracotta floors" loading="lazy"></figure>
+      <figure class="c4 media" data-cursor="View"><img data-speed="12" src="images/07-shaded-lounge-with-cushions-under-a-that.jpg" alt="Shaded lounge with cushions under a thatched roof" loading="lazy"></figure>
+      <figure class="c5 media" data-cursor="View"><img data-speed="8" src="images/07-front-of-the-villa-with-arches-and-bouga.jpg" alt="Front of the villa with arches and bougainvillea" loading="lazy"></figure>
+    </div>
+  </div>
+
+  <!-- rooms -->
+  <div class="wrap rooms" id="rooms">
+    <div class="rooms__head">
+      <p class="eyebrow">Rooms</p>
+      <h3 class="h-display" data-split>Four bedrooms,<br><em>room for the whole crew.</em></h3>
+      <p class="muted-text">Four main bedrooms, plus extra sleeping space for different group set-ups.</p>
+    </div>
+    <div class="rooms__body">
+      <div class="rooms__stage" aria-hidden="true">
+        <img class="is-active" data-room-img="0" src="images/08-bedroom-with-double-bed-and-mosquito-net.jpg" alt="" loading="lazy">
+        <img data-room-img="1" src="images/08-private-bathroom-with-bathtub.jpg" alt="" loading="lazy">
+        <img data-room-img="2" src="images/08-bedroom-with-two-single-beds.jpg" alt="" loading="lazy">
+        <img data-room-img="3" src="images/07-shaded-lounge-with-cushions-under-a-that.jpg" alt="" loading="lazy">
+      </div>
+      <ol class="room-list">
+        <li class="is-active" data-room="0" tabindex="0">
+          <span class="room-list__no">01</span>
+          <div><h4>Master bedroom</h4><p>Double bed · private bathroom with bathtub &amp; shower · mosquito net, ceiling fan &amp; air conditioning. Adjoining room with 2 single beds, mosquito nets and ceiling fan (air conditioning from the master).</p></div>
+          <span class="pill">First floor · 2–4</span>
+        </li>
+        <li data-room="1" tabindex="0">
+          <span class="room-list__no">02</span>
+          <div><h4>Bedroom 2</h4><p>Double bed · private bathroom with shower · mosquito net &amp; air conditioning.</p></div>
+          <span class="pill">2 guests</span>
+        </li>
+        <li data-room="2" tabindex="0">
+          <span class="room-list__no">03</span>
+          <div><h4>Bedroom 3</h4><p>2 single beds · private bathroom with bathtub &amp; shower · mosquito nets &amp; ceiling fan.</p></div>
+          <span class="pill">2–3 guests</span>
+        </li>
+        <li data-room="2" tabindex="0">
+          <span class="room-list__no">04</span>
+          <div><h4>Bedroom 4</h4><p>2 single beds · private bathroom with bathtub &amp; shower · mosquito nets &amp; ceiling fan.</p></div>
+          <span class="pill">2–3 guests</span>
+        </li>
+        <li data-room="3" tabindex="0">
+          <span class="room-list__no">+</span>
+          <div><h4>Extra sleeping space</h4><p>Double bed · mosquito net &amp; fan.</p></div>
+          <span class="pill">2 guests</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 A DAY AT MAREA ============ -->
+<section class="chapter day" id="day">
+  <div class="wrap">
+    <header class="chapter__head">
+      <span class="chapter__no">04</span>
+      <div>
+        <p class="eyebrow">Food, services &amp; slow living</p>
+        <h2 data-split>A day at Marea.<br><em>Your stay, made easy.</em></h2>
+      </div>
+    </header>
+  </div>
+
+  <div class="wrap day__grid">
+    <div class="day__sticky">
+      <div class="sky">
+        <svg viewBox="0 0 300 170" aria-hidden="true">
+          <path class="sky__arc" d="M20 150 A130 130 0 0 1 280 150" />
+          <line x1="0" y1="150" x2="300" y2="150" class="sky__horizon"/>
+          <circle id="sun" cx="20" cy="150" r="11" />
+          <path class="sky__sea" d="M0 156 Q 18 150 36 156 T 72 156 T 108 156 T 144 156 T 180 156 T 216 156 T 252 156 T 288 156 T 324 156" />
+        </svg>
+        <div class="clock" id="clock">07:00</div>
+        <div class="clock-label" id="clockLabel">Sunrise over the reef</div>
+      </div>
+    </div>
+
+    <ol class="timeline">
+      <li class="moment" data-time="07:00" data-label="Sunrise over the reef" data-bg="#f5f0e8" data-fg="#1e3640">
+        <figure class="moment__img media"><img data-speed="6" src="images/stock/breakfast.jpg" alt="Breakfast table with tropical fruit and fresh juice" loading="lazy"></figure>
+        <div class="moment__text">
+          <span class="moment__tag">Fresh &amp; local · included in packages 02 &amp; 03</span>
+          <h3>Slow breakfast</h3>
+          <p>Tropical fruit, yogurt, granola, eggs, bacon, avocado, smoothies and fresh juices.</p>
+        </div>
+      </li>
+      <li class="moment" data-time="09:30" data-label="Low tide, steady breeze" data-bg="#d7e6ec" data-fg="#1e3640">
+        <figure class="moment__img media"><img data-speed="6" src="images/stock/kite-aerial-trail.jpg" alt="Kiteboarder leaving a trail on turquoise water" loading="lazy"></figure>
+        <div class="moment__text">
+          <span class="moment__tag">Optional extra · €25 per person / week</span>
+          <h3>On the water</h3>
+          <p>Beach kite assistance — inflation &amp; deflation, launch &amp; landing, on-beach help. Schools teach, riders ride, we take care of the rest.</p>
+        </div>
+      </li>
+      <li class="moment" data-time="13:00" data-label="High sun, cool kitchen" data-bg="#c3d7e0" data-fg="#1e3640">
+        <figure class="moment__img media"><img data-speed="6" src="images/09-kitchen.jpg" alt="Kitchen of the villa" loading="lazy"></figure>
+        <div class="moment__text">
+          <span class="moment__tag">Planned with you before arrival</span>
+          <h3>Lunch &amp; dinner</h3>
+          <p>Meat, fresh fish, vegetables, pasta, local specialities and seasonal fruit. Packed lunches for long beach days.</p>
+        </div>
+      </li>
+      <li class="moment" data-time="16:30" data-label="Golden hour begins" data-bg="#efd9c3" data-fg="#1e3640">
+        <figure class="moment__img media"><img data-speed="6" src="images/09-pool-terrace.jpg" alt="Pool terrace" loading="lazy"></figure>
+        <div class="moment__text">
+          <span class="moment__tag">On request</span>
+          <h3>Yoga &amp; fitness</h3>
+          <p>Sessions to start the day or unwind after the water — or simply a book by the pool.</p>
+        </div>
+      </li>
+      <li class="moment" data-time="18:30" data-label="Sunset on the ocean" data-bg="#d9825b" data-fg="#1e1a17">
+        <figure class="moment__img media"><img data-speed="6" src="images/stock/dhow-sunset.jpg" alt="Traditional dhow sailing at sunset" loading="lazy"></figure>
+        <div class="moment__text">
+          <span class="moment__tag">Bookable excursion</span>
+          <h3>Dhow sunsets</h3>
+          <p>Sail out on a traditional dhow as the sun drops into the Indian Ocean.</p>
+        </div>
+      </li>
+      <li class="moment" data-time="20:00" data-label="Stars over the garden" data-bg="#1e3640" data-fg="#f5f0e8">
+        <figure class="moment__img media"><img data-speed="6" src="images/07-swimming-pool-with-the-thatched-lounge-b.jpg" alt="Swimming pool with the thatched lounge" loading="lazy"></figure>
+        <div class="moment__text">
+          <span class="moment__tag">Every night</span>
+          <h3>Dinner by the pool</h3>
+          <p>Stories after the session, dinner together under the stars — and a backup generator that keeps the villa running during power cuts.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="wrap services-strip">
+    <div><span class="ico">✈</span><h4>Airport transfers</h4><p>Arrival and departure arranged for you (not included in packages).</p></div>
+    <div><span class="ico">◐</span><h4>Backup generator</h4><p>Keeps the villa running during power cuts.</p></div>
+    <div><span class="ico">✦</span><h4>Always included</h4><p>Chef · housekeeping · security.</p></div>
+  </div>
+</section>
+
+<!-- ============ 05 BEYOND THE WATER ============ -->
+<section class="chapter explore" id="explore">
+  <div class="explore__pin">
+    <div class="explore__track" id="exploreTrack">
+      <div class="explore__intro">
+        <span class="chapter__no chapter__no--light">05</span>
+        <p class="eyebrow eyebrow--light">Beyond the water</p>
+        <h2 data-split>Your home by the ocean.<br><em>Your base for adventure.</em></h2>
+        <p class="lead lead--light">Planning to explore Kenya beyond the coast? We can help you organise a safari — even starting straight from the airport on arrival, before heading to Watamu.</p>
+        <span class="explore__hint"><span class="h-desk">Scroll to explore</span><span class="h-mob">Swipe to explore</span> <i>→</i></span>
+      </div>
+      <article class="xcard xcard--tall" data-cursor="Safari">
+        <div class="xcard__img"><img src="images/stock/elephants-water.jpg" alt="Elephants at a waterhole" loading="lazy"></div>
+        <div class="xcard__meta"><span>01</span><h3>Safari</h3><p>Tsavo’s red elephants — straight from the airport, before the coast.</p></div>
+      </article>
+      <article class="xcard" data-cursor="Wildlife">
+        <div class="xcard__img"><img src="images/stock/zebra.jpg" alt="Zebra in the savannah" loading="lazy"></div>
+        <div class="xcard__meta"><span>02</span><h3>Wildlife</h3><p>Zebras, giraffes and endless savannah light.</p></div>
+      </article>
+      <article class="xcard xcard--wide" data-cursor="Dive">
+        <div class="xcard__img"><img src="images/stock/turtle.jpg" alt="Sea turtle over the reef" loading="lazy"></div>
+        <div class="xcard__meta"><span>03</span><h3>Diving</h3><p>Watamu Marine Park — reefs, turtles and warm, clear water.</p></div>
+      </article>
+      <article class="xcard" data-cursor="Fish">
+        <div class="xcard__img"><img src="images/10-deep-sea-fishing-boat-with-a-marlin-jump.jpg" alt="Deep-sea fishing boat with a marlin jumping" loading="lazy"></div>
+        <div class="xcard__meta"><span>04</span><h3>Deep-sea fishing</h3><p>Marlin, sailfish and tuna beyond the reef.</p></div>
+      </article>
+      <article class="xcard xcard--tall" data-cursor="Sail">
+        <div class="xcard__img"><img src="images/stock/dhow-sail.jpg" alt="Traditional dhow under sail" loading="lazy"></div>
+        <div class="xcard__meta"><span>05</span><h3>Dhow sunsets</h3><p>The oldest way to sail this coast.</p></div>
+      </article>
+      <div class="explore__end">
+        <p class="h-display">Combine the magic of the savannah <em>with your ocean experience.</em></p>
+        <a href="#contact" class="btn btn--light magnetic">Ask us to plan it <i>→</i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 PACKAGES ============ -->
+<section class="chapter packages" id="packages">
+  <div class="wrap">
+    <header class="chapter__head">
+      <span class="chapter__no">06</span>
+      <div>
+        <p class="eyebrow">Packages</p>
+        <h2 data-split>Choose how <em>you stay.</em></h2>
+      </div>
+    </header>
+    <p class="lead packages__lead">Three ways to stay — always the entire villa, just for your group.</p>
+  </div>
+
+  <div class="wrap pricing">
+    <article class="price tilt" data-pkg="villa">
+      <div class="price__top"><span class="price__no">01</span><span class="price__cap">up to 10 guests</span></div>
+      <h3>Villa only</h3>
+      <p class="price__tag">Your space, your camp.</p>
+      <p class="price__amount"><sup>€</sup>390<small>/ night</small></p>
+      <p class="price__desc">Food and groceries at guests’ expense.</p>
+      <button class="btn btn--line" data-choose="villa">Choose &amp; calculate</button>
+    </article>
+    <article class="price price--featured tilt" data-pkg="breakfast">
+      <span class="price__badge">Most booked</span>
+      <div class="price__top"><span class="price__no">02</span><span class="price__cap">up to 8 guests</span></div>
+      <h3>Villa &amp; breakfast</h3>
+      <p class="price__tag">Wake up, have breakfast, go explore.</p>
+      <p class="price__amount"><sup>€</sup>490<small>/ night</small></p>
+      <p class="price__desc">Daily breakfast. 9th and 10th guest +€25 per night each. Lunch and dinner bookable day by day.</p>
+      <button class="btn btn--light" data-choose="breakfast">Choose &amp; calculate</button>
+    </article>
+    <article class="price tilt" data-pkg="all">
+      <div class="price__top"><span class="price__no">03</span><span class="price__cap">up to 8 guests</span></div>
+      <h3>All inclusive</h3>
+      <p class="price__tag">You bring the group. We take care of the rest.</p>
+      <p class="price__amount"><sup>€</sup>590<small>/ night</small></p>
+      <p class="price__desc">Breakfast, lunch and dinner. 9th and 10th guest +€50 per night each. Alcoholic drinks excluded.</p>
+      <button class="btn btn--line" data-choose="all">Choose &amp; calculate</button>
+    </article>
+  </div>
+
+  <!-- estimator -->
+  <div class="wrap">
+    <div class="calc" id="calc">
+      <div class="calc__controls">
+        <p class="eyebrow">Plan your stay</p>
+        <h3 class="h-display">Your camp, <em>in numbers.</em></h3>
+
+        <div class="seg" role="radiogroup" aria-label="Package">
+          <label><input type="radio" name="calcPkg" value="villa"><span>Villa only</span></label>
+          <label><input type="radio" name="calcPkg" value="breakfast" checked><span>Villa &amp; breakfast</span></label>
+          <label><input type="radio" name="calcPkg" value="all"><span>All inclusive</span></label>
+        </div>
+
+        <div class="range">
+          <div class="range__top"><label for="calcNights">Nights</label><output id="outNights">7</output></div>
+          <input type="range" id="calcNights" min="3" max="28" value="7">
+        </div>
+        <div class="range">
+          <div class="range__top"><label for="calcGuests">Guests</label><output id="outGuests">8</output></div>
+          <input type="range" id="calcGuests" min="1" max="10" value="8">
+        </div>
+        <label class="toggle"><input type="checkbox" id="calcKite"><span class="toggle__ui"></span>Add beach kite assistance <small>€25 / person / week</small></label>
+      </div>
+
+      <div class="calc__result">
+        <p class="calc__label">Estimated total</p>
+        <p class="calc__total">€<span id="calcTotal">3,430</span></p>
+        <ul class="calc__lines" id="calcLines"></ul>
+        <p class="calc__pp">≈ €<span id="calcPP">0</span> per person / night</p>
+        <a href="#contact" class="btn btn--light magnetic" id="calcCta">Request this stay <i>→</i></a>
+        <p class="calc__fine">Indicative estimate · final quote after availability check. Transfers not included.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 FEDERICA ============ -->
+<section class="chapter federica" id="federica">
+  <div class="wrap federica__grid">
+    <div class="federica__photos">
+      <figure class="fp1 media"><img data-speed="10" src="images/12-federica-on-the-beach-in-her-wetsuit.jpg" alt="Federica on the beach in her wetsuit" loading="lazy"></figure>
+      <figure class="fp2 media"><img data-speed="-8" src="images/12-federica-kitesurfing.jpg" alt="Federica kitesurfing" loading="lazy"></figure>
+      <div class="federica__badge"><b data-count="7">7</b><span>years in the<br>kite industry</span></div>
+    </div>
+    <div class="federica__text">
+      <span class="chapter__no">07</span>
+      <p class="eyebrow">Meet Federica</p>
+      <h2 data-split>The person <em>behind Marea.</em></h2>
+      <p class="lead">I’m Federica, a kitesurf instructor who has been working in the kite industry for the past seven years — in kite schools, organising lessons, managing guests and creating unforgettable experiences on and off the water.</p>
+      <blockquote class="pull">
+        I understand what it takes to organise a successful camp: <em>good logistics, flexibility, reliable local support and a welcoming place where everyone can feel at home.</em>
+      </blockquote>
+      <p>I’ve been living in Watamu for many years, and this place has become a big part of who I am. What I love most is the way it brings us closer to nature and gives us a true sense of freedom. Life here moves at a different pace, reminding us that happiness can be found in simple things.</p>
+      <p>That’s how MAREA was born — <strong>a place that brings together my experience, my love for Watamu and my desire to share this lifestyle with others.</strong> A home base where kite schools, instructors and groups can focus on what they love, while we take care of the rest.</p>
+      <p class="sig">— Federica</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="chapter contact" id="contact">
+  <div class="contact__bg" aria-hidden="true"><img src="images/stock/palm-shadow.jpg" alt="" loading="lazy"></div>
+  <div class="wrap contact__grid">
+    <div class="contact__info">
+      <p class="eyebrow">Contact</p>
+      <h2 class="contact__title" data-split>Let’s plan<br><em>your camp.</em></h2>
+      <p class="lead">Send us your dates and group size. We’ll check availability and put your stay together — kite, diving or fishing.</p>
+
+      <a class="wa-card magnetic js-wa" href="https://wa.me/393663610084" target="_blank" rel="noopener">
+        <span class="wa-card__ico"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#ico-wa"/></svg></span>
+        <span><small>Fastest answer · WhatsApp</small>+39 366 361 0084</span>
+        <i>↗</i>
+      </a>
+
+      <dl class="contact__list">
+        <div><dt>Email</dt><dd><a href="mailto:info.blueridereastern@gmail.com">info.blueridereastern@gmail.com</a></dd></div>
+        <div><dt>Where</dt><dd>Marea at Arcadia Villa · Watamu, Kenya<br><span>70 metres from the Indian Ocean</span></dd></div>
+      </dl>
+
+      <div class="contact__media">
+        <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Arcadia+Villa+Watamu+Kenya" target="_blank" rel="noopener" data-cursor="Map">
+          <img src="images/13-satellite-view-of-watamu-with-the-locati.jpg" alt="Satellite view of Watamu with the location of Marea marked" loading="lazy">
+          <span>Open in Google Maps ↗</span>
+        </a>
+        <figure class="qr">
+          <img src="images/13-qr-code-message-marea-on-whatsapp.png" alt="QR code: message Marea on WhatsApp" loading="lazy">
+          <figcaption>Scan to chat on WhatsApp</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <form class="form" id="contactForm" novalidate>
+      <div class="form__head">
+        <h3>Send an enquiry</h3>
+        <p>We usually reply within 24 hours.</p>
+      </div>
+      <div class="form__row">
+        <div class="field"><input id="fName" name="name" type="text" autocomplete="name" placeholder=" " required><label for="fName">Name</label></div>
+        <div class="field"><input id="fEmail" name="email" type="email" autocomplete="email" placeholder=" " required><label for="fEmail">Email</label></div>
+      </div>
+      <div class="form__row">
+        <div class="field field--static"><input id="fArr" name="arrival" type="date"><label for="fArr">Arrival</label></div>
+        <div class="field field--static"><input id="fDep" name="departure" type="date"><label for="fDep">Departure</label></div>
+      </div>
+      <div class="form__row">
+        <div class="field"><input id="fGuests" name="guests" type="number" min="1" max="12" placeholder=" "><label for="fGuests">Group size</label></div>
+        <div class="field field--static">
+          <select id="fType" name="type">
+            <option>Kite camp</option><option>Kite school</option><option>Group of friends</option><option>Diving trip</option><option>Fishing trip</option><option>Other</option>
+          </select><label for="fType">Trip type</label>
+        </div>
+      </div>
+      <div class="field field--static">
+        <select id="packageSelect" name="package">
+          <option value="">Not sure yet</option><option>Villa only</option><option>Villa &amp; breakfast</option><option>All inclusive</option>
+        </select><label for="packageSelect">Package</label>
+      </div>
+      <div class="field"><textarea id="fMsg" name="message" rows="4" placeholder=" "></textarea><label for="fMsg">Message — level, extras, safari, transfers…</label></div>
+      <label class="check"><input type="checkbox" name="privacy" required><span>I agree that my details are used to answer my enquiry.</span></label>
+      <div class="form__actions">
+        <button type="submit" class="btn btn--dark magnetic">Send enquiry <i>→</i></button>
+        <button type="button" class="btn btn--wa" id="formWa"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#ico-wa"/></svg>Send via WhatsApp</button>
+      </div>
+      <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" id="footer">
+  <div class="footer__mark" aria-hidden="true"><span class="footer__word">MAREA</span><span class="footer__word footer__word--fill">MAREA</span></div>
+  <div class="wrap footer__row">
+    <img src="images/logo-white.png" alt="Marea at Arcadia Villa, Watamu" class="footer__logo" loading="lazy">
+    <nav class="footer__nav" aria-label="Footer">
+      <a href="#spot">The spot</a><a href="#wind">Wind</a><a href="#villa">The villa</a><a href="#day">A day</a><a href="#explore">Explore</a><a href="#packages">Packages</a><a href="#contact">Contact</a>
+    </nav>
+    <p class="footer__meta">Marea at Arcadia Villa · Watamu, Kenya<br>© <span id="year"></span> Marea · <span lang="it">marea</span> = tide</p>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="wa-float js-wa" href="https://wa.me/393663610084" target="_blank" rel="noopener" aria-label="Message us on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#ico-wa"/></svg>
+  <span class="wa-float__label">Chat with Federica</span>
+</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ico-wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.9-3.9-1.9-6 0-5.9 4.9-10.7 11-10.7s11 4.8 11 10.7S22.1 26.4 16 26.4zm6-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1.1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4.1.8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></symbol>
+</svg>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
