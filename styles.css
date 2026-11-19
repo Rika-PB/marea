@@ -399,10 +399,17 @@ h4 { font-family: var(--serif); font-weight: 400; font-size: 1.35rem; margin: 0;
 .rooms__stage { position: relative; aspect-ratio: 4/5; border-radius: var(--r); overflow: hidden; background: var(--sand); }
 .rooms__stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06); transition: opacity .8s, transform 1.4s var(--ease); }
 .rooms__stage img.is-active { opacity: 1; transform: none; }
+.room-list__img { display: none; }
 @media (max-width: 959px) {
-  .rooms__body { gap: 20px; }
-  .rooms__stage { aspect-ratio: 16/10; position: sticky; top: calc(var(--nav-h) + 10px); z-index: 3; align-self: start; box-shadow: 0 24px 40px -24px rgba(30,54,64,.55); }
-  .rooms__stage::after { content: attr(data-caption); position: absolute; left: 12px; bottom: 12px; background: rgba(245,240,232,.92); color: var(--navy); font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; padding: 6px 12px; border-radius: 999px; }
+  .rooms__stage { display: none; }
+  .room-list__img { display: block; grid-column: 1 / -1; margin: 0; border-radius: var(--r); overflow: hidden; max-height: 0; opacity: 0; transition: max-height .8s var(--ease), opacity .6s, margin .6s var(--ease); }
+  .room-list__img img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; transform: scale(1.06); transition: transform 1.2s var(--ease); }
+  .room-list li.is-active .room-list__img { max-height: 420px; opacity: 1; margin-top: 10px; }
+  .room-list li.is-active .room-list__img img { transform: none; }
+  .room-list li h4 { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .room-list li h4::after { content: "+"; font-family: var(--sans); font-size: 1.4rem; line-height: 1; color: var(--teal); transition: transform .5s var(--ease); flex: none; }
+  .room-list li.is-active h4::after { transform: rotate(45deg); }
+  .room-list li.is-active { padding-left: 0; }
 }
 .room-list { list-style: none; margin: 0; padding: 0; counter-reset: r; }
 .room-list li { display: grid; grid-template-columns: 44px 1fr auto; gap: 8px 18px; padding: 26px 0; border-top: 1px solid rgba(30,54,64,.16); cursor: pointer; transition: padding .5s var(--ease); position: relative; }
@@ -427,9 +434,9 @@ h4 { font-family: var(--serif); font-weight: 400; font-size: 1.35rem; margin: 0;
 .day__sticky { position: sticky; top: calc(var(--nav-h) + 20px); align-self: start; z-index: 2; }
 .sky { text-align: left; }
 .sky svg { width: 100%; max-width: 420px; overflow: visible; }
-.sky__arc { fill: none; stroke: currentColor; stroke-width: 1; stroke-dasharray: 3 6; opacity: .45; }
-.sky__horizon { stroke: currentColor; stroke-width: 1; opacity: .5; }
-.sky__sea { fill: none; stroke: currentColor; stroke-width: 1; opacity: .35; }
+.sky__arc { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-dasharray: 4 7; stroke-linecap: round; opacity: .6; }
+.sky__horizon { stroke: currentColor; stroke-width: 1.6; opacity: .65; }
+.sky__sea { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; opacity: .55; }
 #sun { fill: var(--sun); transition: fill 1s; filter: drop-shadow(0 0 12px rgba(217,130,91,.7)); }
 .day.is-night #sun { fill: var(--cream); filter: drop-shadow(0 0 10px rgba(245,240,232,.6)); }
 .clock { font-family: var(--serif); font-weight: 400; font-size: clamp(4.5rem, 10vw, 9rem); line-height: .9; letter-spacing: -.03em; font-variant-numeric: tabular-nums; margin-top: 12px; }
@@ -440,7 +447,11 @@ h4 { font-family: var(--serif); font-weight: 400; font-size: 1.35rem; margin: 0;
   .day:not(.is-night) .day__sticky { background: color-mix(in srgb, var(--day-bg, #f5f0e8) 78%, transparent); }
   .moment, .moment.is-active { opacity: 1; }
   .sky { display: flex; align-items: center; gap: 18px; }
-  .sky svg { width: 90px; flex: none; }
+  .sky svg { width: 112px; flex: none; }
+  .sky__arc { stroke-width: 6; stroke-dasharray: 10 14; opacity: .75; }
+  .sky__horizon { stroke-width: 5; opacity: .8; }
+  .sky__sea { stroke-width: 5; opacity: .7; }
+  #sun { r: 20px; }
   .clock { font-size: 2.6rem; margin: 0; }
   .clock-label { margin: 0; font-size: .64rem; }
 }

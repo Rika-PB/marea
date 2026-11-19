@@ -183,6 +183,14 @@
     $$('[data-room-img]').forEach((img) => img.classList.toggle('is-active', img.dataset.roomImg === li.dataset.room));
     $('.rooms__stage').dataset.caption = $('h4', li).textContent;
   };
+  // inline photo per room (used on phones/tablets as an accordion)
+  rooms.forEach((li) => {
+    const src = $(`[data-room-img="${li.dataset.room}"]`).getAttribute('src');
+    const fig = document.createElement('figure');
+    fig.className = 'room-list__img';
+    fig.innerHTML = `<img src="${src}" alt="${$('h4', li).textContent}" loading="lazy">`;
+    li.append(fig);
+  });
   setRoom(rooms[0]);
   rooms.forEach((li) => {
     if (finePointer) li.addEventListener('mouseenter', () => setRoom(li));
@@ -533,13 +541,6 @@
         gsap.fromTo($('img', card), { scale: 1.3, xPercent: 8 }, { scale: 1.05, xPercent: -8, ease: 'none', scrollTrigger: { trigger: card, containerAnimation: tween, start: 'left right', end: 'right left', scrub: true } });
         gsap.from(card, { y: 60, rotate: 2, ease: 'none', scrollTrigger: { trigger: card, containerAnimation: tween, start: 'left 110%', end: 'left 60%', scrub: true } });
       });
-    },
-  });
-
-  /* ---------- rooms: on small screens the photo follows the list while scrolling ---------- */
-  ScrollTrigger.matchMedia({
-    '(max-width: 959px)': () => {
-      rooms.forEach((li) => ScrollTrigger.create({ trigger: li, start: 'top 62%', end: 'bottom 62%', onToggle: (st) => st.isActive && setRoom(li) }));
     },
   });
 
