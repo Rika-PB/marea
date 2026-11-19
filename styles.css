@@ -67,7 +67,7 @@ h4 { font-family: var(--serif); font-weight: 400; font-size: 1.35rem; margin: 0;
 .eyebrow--light { color: rgba(245,240,232,.85); }
 
 /* split text */
-.w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .08em; margin-bottom: -.08em; }
+.w { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 .14em .08em; margin: 0 -.14em -.08em; }
 .wi { display: inline-block; will-change: transform; }
 
 /* ---------- grain + cursor ---------- */
@@ -394,7 +394,7 @@ h4 { font-family: var(--serif); font-weight: 400; font-size: 1.35rem; margin: 0;
 .rooms__head { max-width: 760px; margin-bottom: 56px; }
 .rooms__head .h-display { margin-bottom: 20px; }
 .rooms__body { display: grid; gap: 40px; }
-@media (min-width: 960px) { .rooms__body { grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: start; } .rooms__stage { position: sticky; top: calc(var(--nav-h) + 30px); } }
+@media (min-width: 960px) { .rooms__body { grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: center; } }
 .rooms__stage { position: relative; aspect-ratio: 4/5; border-radius: var(--r); overflow: hidden; background: var(--sand); }
 .rooms__stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06); transition: opacity .8s, transform 1.4s var(--ease); }
 .rooms__stage img.is-active { opacity: 1; transform: none; }
